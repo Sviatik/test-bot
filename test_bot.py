@@ -4,6 +4,8 @@ TOKEN = "$TGTOKEN"
 CHAT_ID = "TGCHATID"
 
 testvar = "$testvar"
+testvar = $testvar
+
 
 print testvar
 
