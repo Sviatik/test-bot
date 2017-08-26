@@ -2,4 +2,4 @@ sudo: required
 
 language: python
 
-script: test_bot
+script: test_bot.py
