@@ -3,5 +3,4 @@ sudo: required
 language: python
 
 script:
-    - echo $testvar 
     - python test_bot.py
