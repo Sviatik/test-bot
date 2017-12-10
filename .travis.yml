@@ -3,4 +3,5 @@ sudo: required
 language: python
 
 script:
+    - pip install requests
     - python test_bot.py
