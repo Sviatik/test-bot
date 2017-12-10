@@ -4,7 +4,7 @@ import json
 from yobit import get_price
 from time import sleep
 
-#TOKEN = os.environ['TGTOKEN']
+TOKEN = os.environ['TGTOKEN']
 
 
 URL = "https://api.telegram.org/bot" + TOKEN + "/"
