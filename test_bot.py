@@ -1,27 +1,50 @@
-import urllib2
 import os
 import requests
+import json
+from yobit import get_price
+from time import sleep
 
 TOKEN = os.environ['TGTOKEN']
-CHAT_ID = os.environ["TGCHATID"]
 
 URL = "https://api.telegram.org/bot" + TOKEN + "/"
-#?chat_id=" + CHAT_ID + "&text=testmassage"
-#get = urllib2.urlopen(URL.encode('UTF-8'))
+
+# def write_json(data, filename='answer.json'):
+# 	with open(filename, 'w') as file:
+# 		json.dump(data, file, indent=2, ensure_ascii=False)
+
+def get_updates():
+	url = URL + "getupdates"
+	r = requests.get(url)
+	return r.json()
+
+def get_message():
+	data = get_updates()
+	chat_id = data['result'][-1]['message']['chat']['id']
+	text = data['result'][-1]['message']['text']
+	update_id = data['result'][-1]['update_id']
+	message = {'chat_id': chat_id,
+			   'text': text,
+			   'update_id': update_id}
+	return message
 
 
-
-
-def send_message(chat_id, text="bla bla bla"):
-	url = URL + "sendMessage" + '?chat_id=' + CHAT_ID + "&text=" + text
+def send_message(chat_id, text="Default text"):
+	url = URL + "sendMessage" + '?chat_id=' + str(chat_id) + "&text=" + str(text)
 	#answer = {"char_id": chat_id, "text": text}
-#	r = requests.get(url)
-	get = urllib2.urlopen(url.encode('UTF-8'))
+	r = requests.get(url)
 
 
 
+def main():
+	old_update_id = ''
+	while True:
+		message = get_message()
+		if message['update_id'] != old_update_id:
+			if 'btc' in message['text']:
+				send_message(message["chat_id"], get_price())
+			old_update_id = message['update_id']
+		sleep(3)
 
 
 if __name__ == '__main__':
-	send_message(CHAT_ID)
-	#main()
+	main()

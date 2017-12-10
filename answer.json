@@ -1,0 +1,51 @@
+{
+  "result": [
+    {
+      "message": {
+        "chat": {
+          "first_name": "Sviatoslav",
+          "username": "Sviat_St",
+          "id": 59984185,
+          "last_name": "Stetsiak",
+          "type": "private"
+        },
+        "from": {
+          "first_name": "Sviatoslav",
+          "language_code": "en",
+          "id": 59984185,
+          "last_name": "Stetsiak",
+          "is_bot": false,
+          "username": "Sviat_St"
+        },
+        "message_id": 13,
+        "text": "asd",
+        "date": 1512927708
+      },
+      "update_id": 157272085
+    },
+    {
+      "message": {
+        "chat": {
+          "first_name": "Sviatoslav",
+          "username": "Sviat_St",
+          "id": 59984185,
+          "last_name": "Stetsiak",
+          "type": "private"
+        },
+        "from": {
+          "first_name": "Sviatoslav",
+          "language_code": "en",
+          "id": 59984185,
+          "last_name": "Stetsiak",
+          "is_bot": false,
+          "username": "Sviat_St"
+        },
+        "message_id": 15,
+        "text": "фів",
+        "date": 1512928269
+      },
+      "update_id": 157272086
+    }
+  ],
+  "ok": true
+}
