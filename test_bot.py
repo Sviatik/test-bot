@@ -17,5 +17,5 @@ URL = "https://api.telegram.org/bot" + TOKEN + "/"
 def send_message(chat_id, text="bla bla bla"):
 	url = URL + "sendMessage" + '?chat_id=' + CHAT_ID + "&text=" + text
 	#answer = {"char_id": chat_id, "text": text}
-	r = requests.get(url)
-#	get = urllib2.urlopen(url.encode('UTF-8'))	
+#	r = requests.get(url)
+	get = urllib2.urlopen(url.encode('UTF-8'))	
