@@ -4,13 +4,14 @@ import json
 from yobit import get_price
 from time import sleep
 
-TOKEN = os.environ['TGTOKEN']
+#TOKEN = os.environ['TGTOKEN']
+
 
 URL = "https://api.telegram.org/bot" + TOKEN + "/"
 
-# def write_json(data, filename='answer.json'):
-# 	with open(filename, 'w') as file:
-# 		json.dump(data, file, indent=2, ensure_ascii=False)
+def write_json(data, filename='answer.json'):
+	with open(filename, 'w') as file:
+		json.dump(data, file, indent=2, ensure_ascii=False)
 
 def get_updates():
 	url = URL + "getupdates"
