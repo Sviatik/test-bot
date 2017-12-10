@@ -1,1 +1,1 @@
-web: gunicorn test_bot.py --log-file -
+web: python test_bot.py --log-file -
