@@ -1,1 +1,1 @@
-web: python test_bot.py --log-file -
+worker: python test_bot.py --log-file -
