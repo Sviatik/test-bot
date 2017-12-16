@@ -33,7 +33,7 @@ def get_message():
 
 def send_message(chat_id, text="Default text"):
 	url = URL + "sendMessage" + '?chat_id=' + str(chat_id) + "&text=" + str(text)
-	#answer = {"char_id": chat_id, "text": text}
+	# answer = {"char_id": chat_id, "text": text}
 	r = requests.get(url)
 
 
