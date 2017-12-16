@@ -41,7 +41,7 @@ def main():
 	while True:
 		message = get_message()
 		if message['update_id'] != old_update_id:
-			if 'btc' in message['text']:
+			if 'btc' in message['text'].lower():
 				send_message(message["chat_id"], get_price())
 			old_update_id = message['update_id']
 		sleep(3)
