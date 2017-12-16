@@ -10,6 +10,3 @@ def get_btc():
 	price = r['btc_usd']['avg']
 	return price
 
-
-if __name__ == '__main__':
-	get_btc()
