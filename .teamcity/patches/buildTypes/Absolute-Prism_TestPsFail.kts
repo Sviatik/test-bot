@@ -27,7 +27,6 @@ create(DslContext.projectId, BuildType({
                     echo "asd"
                     echo ${'$'}?
                     echo "incorrect command"
-                    asda
                     echo ${'$'}?
                     #if (${'$'}?) {
                     #  exit 1
